@@ -70,7 +70,7 @@ static long pagesize;
 static int shm_unlink(const char *name) {
     size_t namelen;
     const char *env_tmpdir = getenv("TMPDIR");
-    const char *default_tmpdir = "/data/data/com.micewine.emu/files/usr/tmp/";
+    const char *default_tmpdir = "/data/data/com.windroid.emu/files/usr/tmp/";
 
     char fname[1024];
 
@@ -99,7 +99,7 @@ static int shm_open(const char *name, int oflag, mode_t mode) {
     size_t namelen;
     int fd;
     const char *env_tmpdir = getenv("TMPDIR");
-    const char *default_tmpdir = "/data/data/com.micewine.emu/files/usr/tmp/";
+    const char *default_tmpdir = "/data/data/com.windroid.emu/files/usr/tmp/";
 
     char fname[1024];
 

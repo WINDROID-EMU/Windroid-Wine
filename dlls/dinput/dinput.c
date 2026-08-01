@@ -282,7 +282,7 @@ static HRESULT WINAPI dinput7_CreateDeviceEx( IDirectInput7W *iface, const GUID 
 
     if (IsEqualGUID( &GUID_SysKeyboard, guid )) hr = keyboard_create_device( impl, guid, &device );
     else if (IsEqualGUID( &GUID_SysMouse, guid )) hr = mouse_create_device( impl, guid, &device );
-    else hr = micewine_joystick_create_device( impl, guid, &device );
+    else hr = windroid_joystick_create_device( impl, guid, &device );
 
     if (FAILED(hr)) return hr;
 
@@ -373,7 +373,7 @@ static HRESULT WINAPI dinput8_EnumDevices( IDirectInput8W *iface, DWORD type, LP
     {
         for (int i = 0; i < 4; i++)
         {
-            hr = micewine_joystick_enum_device( type, flags, &instance, impl->dwVersion, i );
+            hr = windroid_joystick_enum_device( type, flags, &instance, impl->dwVersion, i );
             if (hr != DI_OK) continue;
             try_enum_device(device_type, callback, &instance, context, flags);
         }

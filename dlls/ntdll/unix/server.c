@@ -1303,7 +1303,7 @@ static int setup_config_dir(void)
         symlink( "/storage/emulated/0", "dosdevices/d:" );
 
         const char *env_wine_z_disk_folder = getenv("WINE_Z_DISK");
-        const char *default_wine_z_disk_folder = "/data/data/com.micewine.emu/files/";
+        const char *default_wine_z_disk_folder = "/data/data/com.windroid.emu/files/";
 
         char wine_z_disk_folder[1024];
 

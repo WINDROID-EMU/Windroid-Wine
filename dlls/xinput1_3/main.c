@@ -262,7 +262,7 @@ static DWORD WINAPI gamepad_update_thread_proc(void *param)
     SOCKET serverSocket;
     struct sockaddr_in serverAddr;
     struct timeval timeout;
-    const char *env = getenv("MICEWINE_JOYSTICK_SERVER_IP");
+    const char *env = getenv("WINDROID_JOYSTICK_SERVER_IP");
     const char *serverIp = env ? env : "127.0.0.1";
     char buffer[BUFFER_SIZE];
     char controller0[CONTROLLER_BUFFER_SIZE];
