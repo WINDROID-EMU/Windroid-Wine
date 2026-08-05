@@ -61,6 +61,7 @@ AddReg=\
     ControlClass,\
     CurrentVersion,\
     Debugger,\
+    DllOverrides,\
     DirectX,\
     Fonts,\
     MCI,\
@@ -84,6 +85,7 @@ AddReg=\
     ControlClass,\
     CurrentVersion,\
     Debugger,\
+    DllOverrides,\
     DirectX,\
     Fonts,\
     MCI,\
@@ -109,6 +111,7 @@ AddReg=\
     CurrentVersion,\
     CurrentVersionWow64.ntamd64,\
     Debugger,\
+    DllOverrides,\
     DirectX,\
     Fonts,\
     MCI,\
@@ -134,6 +137,7 @@ AddReg=\
     CurrentVersion,\
     CurrentVersionWow64.ntarm64,\
     Debugger,\
+    DllOverrides,\
     DirectX,\
     Fonts,\
     MCI,\
@@ -155,6 +159,7 @@ AddReg=\
     CurrentVersion,\
     CurrentVersionWow64.ntx86,\
     Debugger,\
+    DllOverrides,\
     DirectX,\
     MCI,\
     Misc,\
@@ -170,6 +175,7 @@ AddReg=\
     CurrentVersion,\
     CurrentVersionWow64.ntarm,\
     Debugger,\
+    DllOverrides,\
     DirectX,\
     MCI,\
     Misc,\
@@ -449,6 +455,10 @@ HKLM,%CurrentVersionNT%\AeDebug,"Debugger",2,"winedbg --auto %ld %ld"
 HKLM,%CurrentVersionNT%\AeDebug,"Auto",2,"1"
 HKCU,Software\Wine\Debug,"RelayExclude",2,"ntdll.RtlEnterCriticalSection;ntdll.RtlTryEnterCriticalSection;ntdll.RtlLeaveCriticalSection;kernel32.48;kernel32.49;kernel32.94;kernel32.95;kernel32.96;kernel32.97;kernel32.98;kernel32.TlsGetValue;kernel32.TlsSetValue;kernel32.FlsGetValue;kernel32.FlsSetValue;kernel32.SetLastError"
 HKCU,Software\Wine\Debug,"RelayFromExclude",2,"winex11.drv;winemac.drv;user32;gdi32;advapi32;kernel32"
+
+[DllOverrides]
+HKCU,Software\Wine\DllOverrides,"dinput",2,"builtin"
+HKCU,Software\Wine\DllOverrides,"dinput8",2,"builtin"
 
 [DirectX]
 HKLM,Software\Microsoft\DirectX,"Version",,"4.09.00.0904"
